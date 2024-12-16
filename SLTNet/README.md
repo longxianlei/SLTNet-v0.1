@@ -1,8 +1,7 @@
 # LETNet
-This repository is an official PyTorch implementation of our paper "Lightweight Real-time Semantic Segmentation
-Network with Efficient Transformer and CNN". Accepted by IEEE TRANSACTIONS ON INTELLIGENCE TRANSPORTATION SYSTEMS, 2023. (IF: 9.551)
+This repository is an official PyTorch implementation of our paper "Efficient Event-based Semantic Segmentation with Spike-driven
+Lightweight Transformer-based Networks".
 
-[Paper](https://arxiv.org/abs/2302.10484) | [Code](https://github.com/XU-GITHUB-curry/LETNet_Lightweight-Real-time-Semantic-Segmentation-Network-with-Efficient-Transformer-and-CNN)
 
 ## Installation
 
@@ -12,7 +11,7 @@ Python == 3.6.4
 Pytorch == 1.8.0+cu101
 
 # clone this repository
-git clone https://github.com/XU-GITHUB-curry/LETNet_Lightweight-Real-time-Semantic-Segmentation-Network-with-Efficient-Transformer-and-CNN.git
+git clone https://github.com/STLNet.git
 
 ```
 
@@ -20,10 +19,10 @@ git clone https://github.com/XU-GITHUB-curry/LETNet_Lightweight-Real-time-Semant
 
 ```
 # DDD17
-python train.py --dataset cityscapes --train_type train --max_epochs 1000 --lr 4.5e-2 --batch_size 5
+python train.py --model SLTNet --dataset DDD17_events --classes 6 --dataset_path your_datasets_path --split train --batch_size 32
 
-# camvid
-python train.py --dataset camvid --train_type train --max_epochs 1000 --lr 1e-3 --batch_size 8
+# DSEC
+python train.py --model SLTNet --dataset DSEC_events --classes 11 --dataset_path' your_datasets_path --split train --batch_size 32
 ```
 
 
@@ -31,18 +30,13 @@ python train.py --dataset camvid --train_type train --max_epochs 1000 --lr 1e-3 
 ## Test
 
 ```
-# cityscapes
-python test.py --dataset cityscapes --checkpoint ./checkpoint/cityscapes/FBSNetbs4gpu1_train/model_1000.pth
+# DDD17
+python test.py --dataset DDD17_events --checkpoint ./checkpoint/DDD17_events/SLTNet_ddd17_model_best_miou.pth
 
-# camvid
-python test.py --dataset camvid --checkpoint ./checkpoint/camvid/FBSNetbs6gpu1_trainval/model_1000.pth
+# DSEC
+python test.py --dataset DSEC_events --checkpoint ./checkpoint/DSEC_events/SLTNet_dsec_model_best_miou.pth
 ```
 
-## Predict
-only for cityscapes dataset
-```
-python predict.py --dataset cityscapes 
-```
 
 ## Results
 
