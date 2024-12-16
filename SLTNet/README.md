@@ -19,7 +19,7 @@ git clone https://github.com/XU-GITHUB-curry/LETNet_Lightweight-Real-time-Semant
 ## Train
 
 ```
-# cityscapes
+# DDD17
 python train.py --dataset cityscapes --train_type train --max_epochs 1000 --lr 4.5e-2 --batch_size 5
 
 # camvid
