@@ -42,10 +42,10 @@ python test.py --dataset DSEC_events --checkpoint ./checkpoint/DSEC_events/SLTNe
 
 - Please refer to our article for more details.
 
-| Methods |  Dataset   | Input Size | mIoU(%) |
-| :-----: | :--------: | :--------: | :-----: |
-| LETNet  | Cityscapes |  512x1024  |  72.8   |
-| LETNet  |   CamVid   |  360x480   |  70.5   |
+| Methods  |  Dataset   | Input Size | mIoU(%) |
+| :-----:  | :--------: | :--------: | :-----: |
+|  LETNet  |  DDD17 |  200x346  |  51.92  |
+|  LETNet  |  DSEC  |  480x640  |  47.91  |
 
 
 
@@ -54,13 +54,7 @@ python test.py --dataset DSEC_events --checkpoint ./checkpoint/DSEC_events/SLTNe
 If you find this project useful for your research, please cite our paper:
 
 ```
-@article{xu2023lightweight,
-  title={Lightweight Real-Time Semantic Segmentation Network With Efficient Transformer and CNN},
-  author={Xu, Guoan and Li, Juncheng and Gao, Guangwei and Lu, Huimin and Yang, Jian and Yue, Dong},
-  journal={IEEE Transactions on Intelligent Transportation Systems},
-  year={2023},
-  publisher={IEEE}
-}
+xxx
 ```
 ## Thanks && Refer
 
