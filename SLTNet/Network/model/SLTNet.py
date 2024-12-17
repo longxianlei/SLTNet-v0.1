@@ -12,7 +12,7 @@ from model.module.spike_driven_transformer import MS_Block_Conv
 from spikingjelly.activation_based import layer
 from timm.models.layers import trunc_normal_
 
-__all__ = ["LETNet"]
+__all__ = ["SLTNet"]
 
 
 class Spike_Conv(nn.Module):
@@ -495,7 +495,7 @@ class FeatureEnhance(nn.Module):
         return output
                  
 
-class LETNet(nn.Module):
+class SLTNet(nn.Module):
     # def __init__(self, classes=19, block_1=3, block_2=12, block_3=12, block_4=3, block_5 = 3, block_6 = 3, augment = True):
     def __init__(self, classes=19, block_1=3, block_2=3, block_3=3, block_4=1, block_5=1, block_6=1, ohem=True, augment=True):
         super().__init__()
@@ -703,7 +703,7 @@ class LETNet(nn.Module):
 """print layers and params of network"""
 if __name__ == '__main__':
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = LETNet(classes=19).to(device)
+    model = SLTNet(classes=19).to(device)
     summary(model, (3, 512, 1024))
 
 
