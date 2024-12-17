@@ -44,8 +44,8 @@ python test.py --dataset DSEC_events --checkpoint ./checkpoint/DSEC_events/SLTNe
 
 | Methods | Dataset | Input Size | mIoU(%) |
 | :-----: | :-----: | :--------: | :-----: |
-| LETNet  |  DDD17  |  200x346   |  51.92  |
-| LETNet  |  DSEC   |  480x640   |  47.91  |
+| SLTNet  |  DDD17  |  200x346   |  51.92  |
+| SLTNet  |  DSEC   |  480x640   |  47.91  |
 
 
 
