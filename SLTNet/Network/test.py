@@ -22,14 +22,14 @@ from torchvision.utils import save_image
 
 def parse_args():
     parser = ArgumentParser(description='Efficient semantic segmentation')
-    parser.add_argument('--model', default="LETNet", help="model name: (default ENet)")
+    parser.add_argument('--model', default="SLTNet", help="model name: (default SLTNet)")
     parser.add_argument('--dataset', default="DDD17_events", help="dataset: DDD17_events or DSEC_events")
     parser.add_argument('--input_size', type=str, default="200,346", help="DDD17_events:200,346,DSEC_events:480,640")
     parser.add_argument('--dataset_path', type=str, default="/home/ubuntu/share_container/Datasets/zhuxx/DDD17_events")
     parser.add_argument('--workers', type=int, default=4, help="the number of parallel threads")
     parser.add_argument('--batch_size', type=int, default=2,
                         help=" the batch_size is set to 1 when evaluating or testing")
-    parser.add_argument('--checkpoint', type=str,default="/home/ubuntu/code/LETNet_snn/Network/checkpoint/DDD17_events/SDSA1_2/model_best_miou.pth",
+    parser.add_argument('--checkpoint', type=str,default="/home/ubuntu/code/SLTNet/Network/checkpoint/DDD17_events/SLTNet_small/model_best_miou.pth",
                         help="use the file to load the checkpoint for evaluating or testing ")
     parser.add_argument('--save_seg_dir', type=str, default="./result/",
                         help="saving path of prediction result")
