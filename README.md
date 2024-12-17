@@ -11,7 +11,7 @@ Python == 3.6.4
 Pytorch == 1.8.0+cu101
 
 # clone this repository
-git clone https://github.com/STLNet.git
+git clone https://github.com/longxianlei/SLTNet.git
 
 ```
 
