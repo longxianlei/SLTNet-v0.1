@@ -15,7 +15,7 @@ from model.FastSCNN import FastSCNN
 from model.DABNet import DABNet
 # from model.FSSNet import FSSNet
 from model.FPENet import FPENet
-from ubuntu.code.LETNet_snn.Network.model.SLTNet import LETNet
+from ubuntu.code.LETNet_snn.Network.model.SLTNet import SLTNet
 
 
 def build_model(model_name, num_classes, ohem, early_loss):
@@ -53,5 +53,5 @@ def build_model(model_name, num_classes, ohem, early_loss):
         return FSSNet(classes=num_classes)
     elif model_name == 'FPENet':
         return FPENet(classes=num_classes)
-    elif model_name == 'LETNet':
-        return LETNet(classes=num_classes, ohem=ohem, augment=early_loss)
+    elif model_name == 'SLTNet':
+        return SLTNet(classes=num_classes, ohem=ohem, augment=early_loss)
